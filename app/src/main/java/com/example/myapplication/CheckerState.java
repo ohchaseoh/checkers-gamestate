@@ -8,6 +8,8 @@ public class CheckerState {
     private int currTurn;
 
     private ArrayList<Token> board = new ArrayList<Token>();
+    private ArrayList<Token> light_captured = new ArrayList<Token>();
+    private ArrayList<Token> dark_captured = new ArrayList<Token>();
 
     public CheckerState() {
 
