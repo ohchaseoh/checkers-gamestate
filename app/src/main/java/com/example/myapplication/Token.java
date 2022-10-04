@@ -3,29 +3,31 @@ package com.example.myapplication;
 import android.graphics.Color;
 
 /**
- * @authors Alex, Chase Ohmstede, Mohammad, Sebastian
+ * @authors Alex, Chase, Mohammad, Sebastian
  * @version 10/4/22
  * Class for Checker Tokens
  */
 
 public class Token {
 
-    private String id;
-    private int color;
+    private boolean isKing;
+    private boolean isDark;
 
     public Token() {
-        this.id = "black_1";
-        this.color = Color.BLACK;
+        this.isKing = false;
+        this.isDark = false;
     }
 
     public Token(Token orig) {
-        this.id = orig.id;
-        this.color = orig.color;
+        this.isKing = orig.isKing;
+        this.isDark = orig.isDark;
     }
+
+    // toString should display isKing and isDark
 
     @Override
     public String toString() {
-        return id;
+        return isKing + "\n" + isDark;
     }
 
 }
