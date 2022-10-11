@@ -6,16 +6,46 @@ public class CheckerState {
 
     // 0 = NULL, 1 = P1, 2 = P2
     private int currTurn;
+    private int board_length;
 
     private ArrayList<Token> board = new ArrayList<Token>();
     private ArrayList<Token> light_captured = new ArrayList<Token>();
     private ArrayList<Token> dark_captured = new ArrayList<Token>();
 
     public CheckerState() {
-
+        board_length = 8;
     }
 
     public CheckerState(CheckerState copy) {
+
+    }
+
+    public void new_game() {
+        // C: remake game board to its original state
+        Token black = new Token();
+        black.setDark(true);
+
+        Token red = new Token();
+        red.setDark(false);
+
+        for (int i = 0; i < board_length; i++) {
+
+            for (int j = 0; j < board_length; j++) {
+
+                // C: place black tokens
+                if ((j == 0 || j == 2) && (i % 2 == 0)) {
+                    board.add(black);
+                }
+
+                // C: place red tokens
+                if ((j == (board_length - 3) || j == (board_length - 1)) && (i % 2 != 0)) {
+                    board.add(red);
+                }
+
+                // C: place NULL (empty spaces)
+            }
+        }
+
 
     }
     /*

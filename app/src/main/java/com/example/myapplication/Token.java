@@ -23,11 +23,35 @@ public class Token {
         this.isDark = orig.isDark;
     }
 
+    public boolean isKing() {
+        return isKing;
+    }
+
+    public void setKing(boolean king) {
+        isKing = king;
+    }
+
+    public boolean isDark() {
+        return isDark;
+    }
+
+    public void setDark(boolean dark) {
+        isDark = dark;
+    }
+
     // toString should display isKing and isDark
 
     @Override
-    public String toString() {
-        return isKing + "\n" + isDark;
+    public String toString(){
+        String t = "";
+
+        if (isDark) {
+            t = t + "B";
+        } else t = t + "R";
+
+        if (isKing) t = t + "K";
+
+        return t;
     }
 
 }
