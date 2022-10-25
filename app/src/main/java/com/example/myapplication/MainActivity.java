@@ -7,6 +7,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
+/**
+ * @authors Chase Ohmstede, Mohammad Surur, Alex Martinez-Lopez
+ * @version 10/13/22
+ *
+ * An accurate and playable depiction of the game Checkers, written using Android API
+ * Network play and AI soon to be available
+ *
+ * Bugs: doesn't work yet (just the GameState)
+ *
+ */
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

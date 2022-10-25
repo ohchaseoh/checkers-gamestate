@@ -37,12 +37,21 @@ public class CheckerState {
                     board.add(black);
                 }
 
+                else if ((j == 1) && (i % 2 != 0)) {
+                    board.add(black);
+                }
+
                 // C: place red tokens
-                if ((j == (board_length - 3) || j == (board_length - 1)) && (i % 2 != 0)) {
+                else if ((j == (board_length - 3) || j == (board_length - 1)) && (i % 2 != 0)) {
+                    board.add(red);
+                }
+
+                else if ((j == (board_length - 2)) && (i % 2 == 0)) {
                     board.add(red);
                 }
 
                 // C: place NULL (empty spaces)
+                
             }
         }
 
