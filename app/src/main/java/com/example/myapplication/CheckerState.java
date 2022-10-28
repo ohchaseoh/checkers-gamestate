@@ -13,11 +13,13 @@ public class CheckerState {
     private ArrayList<Token> dark_captured = new ArrayList<Token>();
 
     public CheckerState() {
+        currTurn = 0;
         board_length = 8;
     }
 
     public CheckerState(CheckerState copy) {
-
+        this.currTurn = copy.currTurn;
+        this.board_length = copy.board_length;
     }
 
     public void new_game() {
@@ -54,8 +56,6 @@ public class CheckerState {
                 
             }
         }
-
-
     }
     /*
     @Override

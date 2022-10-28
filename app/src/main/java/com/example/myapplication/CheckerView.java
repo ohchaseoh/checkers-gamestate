@@ -26,6 +26,13 @@ public class CheckerView extends View {
     public void draw(final Canvas c) {
         super.draw(c);
 
+        boardPaint.setColor(getResources().getColor(R.color.checker_bg2));
+        c.drawRect(115, 115, 1385, 1385, boardPaint);
+
+        boardPaint.setColor(getResources().getColor(R.color.checker_bg3));
+        c.drawRect(140, 140, 1360, 1360, boardPaint);
+
+
         for (int x = 0; x < 8; x++) {
             for (int y = 0; y < 8; y++) {
                 if ((x + y) % 2 == 0) boardPaint.setColor(getResources().getColor(R.color.checker_black));
