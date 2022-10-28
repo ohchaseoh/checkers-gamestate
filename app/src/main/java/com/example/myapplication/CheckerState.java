@@ -57,12 +57,31 @@ public class CheckerState {
             }
         }
     }
-    /*
+
     @Override
     public String toString() {
-        return NULL;
+        String str = "GameState {\n" +
+           "    currTurn = " + this.currTurn + "\n" +
+           "    board_length = " + this.board_length + "\n" +
+           "    board = {";
+                for(int i = 0; i < this.board.size(); i++) {
+                    str += this.board.get(i).toString() +
+                   "\n}";
+                }
+                str += "    light_captured = { ";
+                for(int j = 0; j < light_captured.size(); j++) {
+                    str += light_captured.get(j).toString() + "\n}";
+                }
+                str += "    dark_captured = { ";
+                for(int k = 0; k < dark_captured.size(); k++) {
+                    str += dark_captured.get(k).toString() + "\n}";
+                }
+
+
+        str += " } ";
+        return str;
     }
-    */
+
 
     public void switchTurn() {
         if (currTurn == 0) return;
