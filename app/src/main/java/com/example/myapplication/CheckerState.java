@@ -76,12 +76,10 @@ public class CheckerState {
                 for(int k = 0; k < dark_captured.size(); k++) {
                     str += dark_captured.get(k).toString() + "\n}";
                 }
-
-
         str += " } ";
         return str;
-    }
 
+    }
 
     public void switchTurn() {
         if (currTurn == 0) return;
@@ -90,5 +88,4 @@ public class CheckerState {
 
         return;
     }
-
 }

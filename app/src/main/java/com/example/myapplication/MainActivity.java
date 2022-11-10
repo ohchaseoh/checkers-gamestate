@@ -32,14 +32,17 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // C: setting up the edit text
-                //EditText multilineText = (EditText) findViewById(R.id.editTextTextMultiLine);
-                //multilineText.setText("");
+                EditText multilineText = (EditText) findViewById(R.id.editTextTextMultiLine);
+                multilineText.setText("");
 
                 // C: new instance of GameState class
                 CheckerState firstState = new CheckerState();
 
                 // C: deep copy of firstState
                 CheckerState secondState = new CheckerState(firstState);
+
+                // printing out toString of firstState
+                multilineText.setText(firstState.toString());
 
             }
         });

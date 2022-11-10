@@ -3,7 +3,7 @@ package com.example.myapplication;
 import android.graphics.Color;
 
 /**
- * @authors Alex, Chase, Mohammad, Sebastian
+ * @authors Alex, Chase, Mohammad
  * @version 10/4/22
  * Class for Checker Tokens
  */
